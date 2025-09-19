@@ -245,7 +245,7 @@ if letter in vowels:
 else:
     print(f"{letter} is a consonant.")
 '''
-'''
+
 # Question 15
 
 grade = input("Enter your grade level: ")
@@ -266,7 +266,7 @@ elif grade in ["9", "10", "11", "12"]:
         print("Pool is open at 11 AM.")
     elif time == "Afternoon".lower():
         print("Pool is open at 3 PM.")
-'''
+
 '''
 # Question 16
 
@@ -310,7 +310,7 @@ elif length1 == length2 and length1 == length3 and length2 == length3:
 elif length1 == length2 or length1 == length3 or length2 == length3:
     print("isosceles triangle")
 '''
-
+'''
 # Question 19
 
 luke = (input("Enter someones name:"))
@@ -325,3 +325,4 @@ elif luke == "R2D2".lower():
     print("Relation: Droid")
 else:
     print("Relation: Unknown")
+'''
