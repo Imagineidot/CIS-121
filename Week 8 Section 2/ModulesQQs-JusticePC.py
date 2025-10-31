@@ -80,7 +80,7 @@ def find_relation(name = ""):
 # Run Function for Testing
 find_relation()
 '''
-
+'''
 # Question  6 (Hailstone Sequence)
 
 def hailstone_seq(n = 40):
@@ -93,7 +93,7 @@ def hailstone_seq(n = 40):
 
 # Run Function for Testing
 hailstone_seq()
-
+'''
 '''
 # Question 7 (Ascending Order)
 
@@ -190,7 +190,7 @@ report_evens()
 # Question 13 (Report Vowels)
 
 def is_vowel(ch):
-    return ch.lower() in "aeiou"
+    return len(ch) == 1 and ch.lower() in "aeiou"
 
 def report_vowels():
     word = input("Enter a Word: ")
@@ -220,7 +220,7 @@ def is_negative(n):
     return n < 0
 
 def is_odd(n):
-    return n % 2 != 0
+    return n % 2 == 1
 
 def report_negative_odds():
     nums = list(map(int, input("Enter Numbers Seperated by Commas: ").split(",")))
@@ -230,3 +230,18 @@ def report_negative_odds():
 # Run Function for Testing
 report_negative_odds()
 '''
+def descending_order(n1, n2=15, n3=5):
+ n1 = int(input("Enter First Number: ") or n1)
+ n2 = int(input("Enter Second Number (default 15): ") or n2)
+ n3 = int(input("Enter Third Number (default 5): ") or n3)
+
+ if n1 < n2:
+  n1, n2 = n2, n1
+ if n2 < n3:
+  n2, n3 = n3, n2
+ if n1 < n2:
+  n1, n2 = n2, n1
+
+ print([n1, n2, n3])
+
+descending_order()

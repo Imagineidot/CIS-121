@@ -142,7 +142,7 @@ while True:
 
 print("The largest even number entered is:", largest_even)
 '''
-
+'''
 # Question 11
 
 # Ask the user for an integer
@@ -154,4 +154,4 @@ for i in range(1, n + 1):
     total += i * i   # same as i**2
 
 print("The sum of squares up to", n, "is:", total)
-
+'''

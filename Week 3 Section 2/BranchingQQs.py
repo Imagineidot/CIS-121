@@ -245,7 +245,7 @@ if letter in vowels:
 else:
     print(f"{letter} is a consonant.")
 '''
-
+'''
 # Question 15
 
 grade = input("Enter your grade level: ")
@@ -266,7 +266,7 @@ elif grade in ["9", "10", "11", "12"]:
         print("Pool is open at 11 AM.")
     elif time == "Afternoon".lower():
         print("Pool is open at 3 PM.")
-
+'''
 '''
 # Question 16
 

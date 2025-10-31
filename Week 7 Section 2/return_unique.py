@@ -1,21 +1,26 @@
 # Wirtten  by Justice V.
 
-"""
-Each number repeats at least once, except for two. Return the two unique numbers.
-"""
-from collections import Counter
-
 def return_unique(numbers):
-    counts = Counter(numbers)
-    uniques = [x for x, c in counts.items() if c == 1]
-    if len(uniques) != 2:
-        raise ValueError("Expected exactly two unique elements")
-    return uniques
+    counts = {}
+    for x in numbers:
+        if x in counts:
+            counts[x] += 1
+        else:
+            counts[x] = 1
+
+    result = []
+    for x in counts:
+        if counts[x] == 1:
+            result.append(x)
+
+    if len(result) == 2:
+        print(result[0], result[1])
+    else:
+        print("Did not find exactly two unique numbers.")
 
 if __name__ == "__main__":
-    user_input = input("Enter a array of numbers separated by commas that has to be two unique numbers: ")
-    number_list = [int(num.strip()) for num in user_input.split(",")]
-    print(return_unique(number_list))
-   # print(return_unique([1,9,8,8,7,6,1,6]))                       # [9, 7]
-   # print(return_unique([5,5,2,4,4,4,9,9,9,1]))                   # [2, 1]
-   # print(return_unique([9,5,6,8,7,7,1,1,1,1,1,9,8]))             # [5, 6]
+    raw = input("Enter integers (space-separated): ")
+    nums = []
+    for part in raw.split():
+        nums.append(int(part))
+    return_unique(nums)

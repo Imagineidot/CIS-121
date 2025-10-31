@@ -21,7 +21,7 @@ while number <= 10:
 '''
 number = 1
 while number <= 10:
-    if number % 2 == 0:
+    
         print(number, end=' ')
     number += 1
 '''
@@ -78,5 +78,18 @@ while not done:
         total += int(user_num)
     else:
         done = True
+
+print(f'total = {total}')
+
+total = 0
+user_num = ''
+done = False
+
+while True:
+    user_num = input("Enter a number or type q to end: ")
+    if user_num != 'q':
+        total += int(user_num)
+    else:
+        break
 
 print(f'total = {total}')
