@@ -1,16 +1,15 @@
 # Written by Justice V.
 
 class Course:
-    
-    def __init__(self):
-        self.course_name = "Unknown"
-        self.course_number = "Unknown"
-        self.students = []
+    def __init__(self, course_name="Unknown", course_number="Unknown"):
+        self.course_name = course_name
+        self.course_number = course_number
+        self.students = []      # list starts empty
 
     def get_course_name(self):
         return self.course_name
-    def set_course_name(self, course):
-        self.course_name = course
+    def set_course_name(self, name):
+        self.course_name = name
 
     def get_course_number(self):
         return self.course_number
@@ -18,12 +17,17 @@ class Course:
         self.course_number = number
 
     def add_student(self, student):
-        self.students.append(student.get_name())
+        # student is a Student object
+        self.students.append(student)
 
     def show_student_enrollment(self):
-        print("Students Enrolled in", self.course_name, self.course_number,": ")
+        print(f"Students enrolled in {self.course_name} ({self.course_number}):")
         for s in self.students:
-            print(" -", s)
+            print(f"{s.name}")
 
     def __str__(self):
-        return f'Course: {self.course_name} {self.course_number}, Students: {self.students}'
+        names = []
+        for s in self.students:
+            names.append(s.name)
+
+        return f"Course(name={self.course_name}, number={self.course_number}, students={names})"

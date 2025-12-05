@@ -80,7 +80,7 @@ def find_relation(name = ""):
 # Run Function for Testing
 find_relation()
 '''
-
+'''
 # Question  6 (Hailstone Sequence)
 
 def hailstone_seq(n = 40):
@@ -93,7 +93,7 @@ def hailstone_seq(n = 40):
 
 # Run Function for Testing
 hailstone_seq()
-
+'''
 '''
 # Question 7 (Ascending Order)
 
